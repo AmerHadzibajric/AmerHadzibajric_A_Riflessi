@@ -15,9 +15,11 @@ pinMode(rosso, OUTPUT);
 
 void loop() {
   // put your main code here, to run repeatedly:
+delay(Random);
 digitalWrite(beep, HIGH);
 delay (1000);
 digitalWrite (beep, LOW);
+delay(1000);
 
 }
 
