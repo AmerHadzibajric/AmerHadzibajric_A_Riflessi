@@ -14,7 +14,6 @@ pinMode(verde,OUTPUT);
 pinMode(buzzer, OUTPUT);
 Serial.begin(9600);
 }
-
 void loop() {
   // put your main code here, to run repeatedly:
   if(digitalRead(bottone) == HIGH)
@@ -32,7 +31,6 @@ void loop() {
     digitalWrite(blu, LOW);
   Serial.println(TempoLed); 
   delay(random(1000,5000));
-  
     TempoBuzzer = 0;
     digitalWrite(buzzer, HIGH);
     while(digitalRead(bottone) == LOW)
@@ -42,8 +40,7 @@ void loop() {
     }  
     digitalWrite(buzzer, LOW);
   Serial.println(TempoBuzzer);   
-  
-  if(TempoBuzzer > 350)
+  if(TempoBuzzer > 200)
   {
     digitalWrite(rosso,HIGH);
   }
@@ -51,7 +48,9 @@ void loop() {
   {
     digitalWrite(verde,HIGH);
   }
-  delay(500);
+  delay(2000);
+  digitalWrite(verde,LOW);
+  digitalWrite(rosso,LOW);
 }
 }
 
