@@ -39,7 +39,7 @@ void loop() {
       delay(1);
     }  
     digitalWrite(buzzer, LOW);
-  Serial.println(TempoBuzzer);   
+  Serial.println(TempoBuzzer );   
   if(TempoBuzzer > 200)
   {
     digitalWrite(rosso,HIGH);
@@ -53,5 +53,3 @@ void loop() {
   digitalWrite(rosso,LOW);
 }
 }
-
-  
